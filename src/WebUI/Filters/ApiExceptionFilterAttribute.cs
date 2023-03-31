@@ -1,9 +1,9 @@
-﻿using newnew.Application.Common.Exceptions;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace newnew.WebUI.Filters;
+namespace Entekhab.Salary.WebUI.Filters;
 
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {

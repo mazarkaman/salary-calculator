@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.Enums;
+﻿namespace Entekhab.Salary.Domain.Enums;
 
 public enum PriorityLevel
 {

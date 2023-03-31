@@ -1,15 +1,15 @@
 ﻿using System.Reflection;
-using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
-using newnew.Infrastructure.Identity;
-using newnew.Infrastructure.Persistence.Interceptors;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Infrastructure.Identity;
+using Entekhab.Salary.Infrastructure.Persistence.Interceptors;
 using Duende.IdentityServer.EntityFramework.Options;
 using MediatR;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
-namespace newnew.Infrastructure.Persistence;
+namespace Entekhab.Salary.Infrastructure.Persistence;
 
 public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, IApplicationDbContext
 {

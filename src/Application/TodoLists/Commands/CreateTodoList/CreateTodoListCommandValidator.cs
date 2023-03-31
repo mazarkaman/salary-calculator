@@ -1,8 +1,8 @@
-﻿using newnew.Application.Common.Interfaces;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Application.TodoLists.Commands.CreateTodoList;
+namespace Entekhab.Salary.Application.TodoLists.Commands.CreateTodoList;
 
 public class CreateTodoListCommandValidator : AbstractValidator<CreateTodoListCommand>
 {

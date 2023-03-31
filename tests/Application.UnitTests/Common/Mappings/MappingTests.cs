@@ -1,12 +1,12 @@
 ﻿using System.Runtime.Serialization;
 using AutoMapper;
-using newnew.Application.Common.Mappings;
-using newnew.Application.Common.Models;
-using newnew.Application.TodoLists.Queries.GetTodos;
-using newnew.Domain.Entities;
+using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Application.Common.Models;
+using Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
+using Entekhab.Salary.Domain.Entities;
 using NUnit.Framework;
 
-namespace newnew.Application.UnitTests.Common.Mappings;
+namespace Entekhab.Salary.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {

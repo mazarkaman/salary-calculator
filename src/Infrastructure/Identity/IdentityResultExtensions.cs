@@ -1,7 +1,7 @@
-﻿using newnew.Application.Common.Models;
+﻿using Entekhab.Salary.Application.Common.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace newnew.Infrastructure.Identity;
+namespace Entekhab.Salary.Infrastructure.Identity;
 
 public static class IdentityResultExtensions
 {

@@ -1,8 +1,8 @@
-﻿using newnew.Domain.Events;
+﻿using Entekhab.Salary.Domain.Events;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace newnew.Application.TodoItems.EventHandlers;
+namespace Entekhab.Salary.Application.TodoItems.EventHandlers;
 
 public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedEvent>
 {
@@ -15,7 +15,7 @@ public class TodoItemCreatedEventHandler : INotificationHandler<TodoItemCreatedE
 
     public Task Handle(TodoItemCreatedEvent notification, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("newnew Domain Event: {DomainEvent}", notification.GetType().Name);
+        _logger.LogInformation("Entekhab.Salary Domain Event: {DomainEvent}", notification.GetType().Name);
 
         return Task.CompletedTask;
     }

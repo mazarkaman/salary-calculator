@@ -1,11 +1,11 @@
-﻿using newnew.Application.Common.Behaviours;
-using newnew.Application.Common.Interfaces;
-using newnew.Application.TodoItems.Commands.CreateTodoItem;
+﻿using Entekhab.Salary.Application.Common.Behaviours;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.TodoItems.Commands.CreateTodoItem;
 using Microsoft.Extensions.Logging;
 using Moq;
 using NUnit.Framework;
 
-namespace newnew.Application.UnitTests.Common.Behaviours;
+namespace Entekhab.Salary.Application.UnitTests.Common.Behaviours;
 
 public class RequestLoggerTests
 {

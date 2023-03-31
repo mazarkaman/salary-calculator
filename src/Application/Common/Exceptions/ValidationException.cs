@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace newnew.Application.Common.Exceptions;
+namespace Entekhab.Salary.Application.Common.Exceptions;
 
 public class ValidationException : Exception
 {

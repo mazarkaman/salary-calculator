@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
-using ValidationException = newnew.Application.Common.Exceptions.ValidationException;
+using ValidationException = Entekhab.Salary.Application.Common.Exceptions.ValidationException;
 
-namespace newnew.Application.Common.Behaviours;
+namespace Entekhab.Salary.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : IRequest<TResponse>

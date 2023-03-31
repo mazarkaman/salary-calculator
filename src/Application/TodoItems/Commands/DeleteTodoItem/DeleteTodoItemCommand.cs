@@ -1,10 +1,10 @@
-﻿using newnew.Application.Common.Exceptions;
-using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
-using newnew.Domain.Events;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Domain.Events;
 using MediatR;
 
-namespace newnew.Application.TodoItems.Commands.DeleteTodoItem;
+namespace Entekhab.Salary.Application.TodoItems.Commands.DeleteTodoItem;
 
 public record DeleteTodoItemCommand(int Id) : IRequest;
 

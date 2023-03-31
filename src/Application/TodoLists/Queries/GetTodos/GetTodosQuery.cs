@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using newnew.Application.Common.Interfaces;
-using newnew.Application.Common.Security;
-using newnew.Domain.Enums;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Security;
+using Entekhab.Salary.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Application.TodoLists.Queries.GetTodos;
+namespace Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
 
 [Authorize]
 public record GetTodosQuery : IRequest<TodosVm>;

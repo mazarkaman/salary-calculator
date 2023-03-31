@@ -1,10 +1,10 @@
-﻿using newnew.Domain.Entities;
-using newnew.Infrastructure.Identity;
+﻿using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace newnew.Infrastructure.Persistence;
+namespace Entekhab.Salary.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {

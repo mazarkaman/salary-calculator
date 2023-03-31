@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace newnew.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+namespace Entekhab.Salary.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public record GetWeatherForecastsQuery : IRequest<IEnumerable<WeatherForecast>>;
 

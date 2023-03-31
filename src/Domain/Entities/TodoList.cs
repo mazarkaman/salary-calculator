@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.Entities;
+﻿namespace Entekhab.Salary.Domain.Entities;
 
 public class TodoList : BaseAuditableEntity
 {

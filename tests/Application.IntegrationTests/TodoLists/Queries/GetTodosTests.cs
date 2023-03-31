@@ -1,10 +1,10 @@
-﻿using newnew.Application.TodoLists.Queries.GetTodos;
-using newnew.Domain.Entities;
-using newnew.Domain.ValueObjects;
+﻿using Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
+using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace newnew.Application.IntegrationTests.TodoLists.Queries;
+namespace Entekhab.Salary.Application.IntegrationTests.TodoLists.Queries;
 
 using static Testing;
 

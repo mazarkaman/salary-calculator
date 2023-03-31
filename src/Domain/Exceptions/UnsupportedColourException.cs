@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.Exceptions;
+﻿namespace Entekhab.Salary.Domain.Exceptions;
 
 public class UnsupportedColourException : Exception
 {

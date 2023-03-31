@@ -1,4 +1,4 @@
-﻿using newnew.Domain.Common;
+﻿using Entekhab.Salary.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace MediatR;

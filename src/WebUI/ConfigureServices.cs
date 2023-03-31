@@ -1,7 +1,7 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Infrastructure.Persistence;
-using newnew.WebUI.Filters;
-using newnew.WebUI.Services;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Infrastructure.Persistence;
+using Entekhab.Salary.WebUI.Filters;
+using Entekhab.Salary.WebUI.Services;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using NSwag;
@@ -34,7 +34,7 @@ public static class ConfigureServices
 
         services.AddOpenApiDocument(configure =>
         {
-            configure.Title = "newnew API";
+            configure.Title = "Entekhab.Salary API";
             configure.AddSecurity("JWT", Enumerable.Empty<string>(), new OpenApiSecurityScheme
             {
                 Type = OpenApiSecuritySchemeType.ApiKey,

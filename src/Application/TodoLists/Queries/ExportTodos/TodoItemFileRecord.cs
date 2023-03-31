@@ -1,7 +1,7 @@
-﻿using newnew.Application.Common.Mappings;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Domain.Entities;
 
-namespace newnew.Application.TodoLists.Queries.ExportTodos;
+namespace Entekhab.Salary.Application.TodoLists.Queries.ExportTodos;
 
 public class TodoItemRecord : IMapFrom<TodoItem>
 {

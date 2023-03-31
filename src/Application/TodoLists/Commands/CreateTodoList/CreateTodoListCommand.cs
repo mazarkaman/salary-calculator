@@ -1,8 +1,8 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
 using MediatR;
 
-namespace newnew.Application.TodoLists.Commands.CreateTodoList;
+namespace Entekhab.Salary.Application.TodoLists.Commands.CreateTodoList;
 
 public record CreateTodoListCommand : IRequest<int>
 {

@@ -1,6 +1,6 @@
-﻿using newnew.Application.TodoLists.Queries.ExportTodos;
+﻿using Entekhab.Salary.Application.TodoLists.Queries.ExportTodos;
 
-namespace newnew.Application.Common.Interfaces;
+namespace Entekhab.Salary.Application.Common.Interfaces;
 
 public interface ICsvFileBuilder
 {

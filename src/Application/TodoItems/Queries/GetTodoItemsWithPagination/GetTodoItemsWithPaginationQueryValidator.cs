@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace newnew.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace Entekhab.Salary.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class GetTodoItemsWithPaginationQueryValidator : AbstractValidator<GetTodoItemsWithPaginationQuery>
 {

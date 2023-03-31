@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace newnew.Application.Common.Mappings;
+namespace Entekhab.Salary.Application.Common.Mappings;
 
 public interface IMapFrom<T>
 {

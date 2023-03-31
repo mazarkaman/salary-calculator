@@ -1,4 +1,4 @@
-﻿namespace newnew.Application.Common.Interfaces;
+﻿namespace Entekhab.Salary.Application.Common.Interfaces;
 
 public interface IDateTime
 {

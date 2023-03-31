@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
-using newnew.Application.Common.Interfaces;
-using newnew.Application.TodoLists.Queries.ExportTodos;
-using newnew.Infrastructure.Files.Maps;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.TodoLists.Queries.ExportTodos;
+using Entekhab.Salary.Infrastructure.Files.Maps;
 using CsvHelper;
 
-namespace newnew.Infrastructure.Files;
+namespace Entekhab.Salary.Infrastructure.Files;
 
 public class CsvFileBuilder : ICsvFileBuilder
 {

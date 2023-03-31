@@ -1,6 +1,6 @@
-﻿using newnew.Application.Common.Models;
+﻿using Entekhab.Salary.Application.Common.Models;
 
-namespace newnew.Application.Common.Interfaces;
+namespace Entekhab.Salary.Application.Common.Interfaces;
 
 public interface IIdentityService
 {

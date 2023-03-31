@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace newnew.Infrastructure.Identity;
+namespace Entekhab.Salary.Infrastructure.Identity;
 
 public class ApplicationUser : IdentityUser
 {

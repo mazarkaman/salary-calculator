@@ -1,7 +1,7 @@
-﻿using newnew.Application.Common.Mappings;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Domain.Entities;
 
-namespace newnew.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace Entekhab.Salary.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public class TodoItemBriefDto : IMapFrom<TodoItem>
 {

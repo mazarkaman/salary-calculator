@@ -1,9 +1,9 @@
-﻿using newnew.Application.Common.Exceptions;
-using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
 using MediatR;
 
-namespace newnew.Application.TodoLists.Commands.UpdateTodoList;
+namespace Entekhab.Salary.Application.TodoLists.Commands.UpdateTodoList;
 
 public record UpdateTodoListCommand : IRequest
 {

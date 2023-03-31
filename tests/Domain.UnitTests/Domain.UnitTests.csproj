@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>newnew.Domain.UnitTests</RootNamespace>
-        <AssemblyName>newnew.Domain.UnitTests</AssemblyName>
+        <RootNamespace>Entekhab.Salary.Domain.UnitTests</RootNamespace>
+        <AssemblyName>Entekhab.Salary.Domain.UnitTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

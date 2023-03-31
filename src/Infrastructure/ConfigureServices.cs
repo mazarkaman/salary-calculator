@@ -1,9 +1,9 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Infrastructure.Files;
-using newnew.Infrastructure.Identity;
-using newnew.Infrastructure.Persistence;
-using newnew.Infrastructure.Persistence.Interceptors;
-using newnew.Infrastructure.Services;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Infrastructure.Files;
+using Entekhab.Salary.Infrastructure.Identity;
+using Entekhab.Salary.Infrastructure.Persistence;
+using Entekhab.Salary.Infrastructure.Persistence.Interceptors;
+using Entekhab.Salary.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +20,7 @@ public static class ConfigureServices
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("newnewDb"));
+                options.UseInMemoryDatabase("Entekhab.SalaryDb"));
         }
         else
         {

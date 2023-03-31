@@ -1,7 +1,7 @@
-﻿using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Application.Common.Interfaces;
+namespace Entekhab.Salary.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {

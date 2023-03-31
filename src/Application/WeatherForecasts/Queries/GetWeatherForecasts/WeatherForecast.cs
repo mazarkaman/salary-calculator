@@ -1,4 +1,4 @@
-﻿namespace newnew.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿namespace Entekhab.Salary.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 
 public class WeatherForecast
 {

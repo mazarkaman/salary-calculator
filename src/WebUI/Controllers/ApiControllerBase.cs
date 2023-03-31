@@ -2,7 +2,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace newnew.WebUI.Controllers;
+namespace Entekhab.Salary.WebUI.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.Events;
+﻿namespace Entekhab.Salary.Domain.Events;
 
 public class TodoItemCreatedEvent : BaseEvent
 {

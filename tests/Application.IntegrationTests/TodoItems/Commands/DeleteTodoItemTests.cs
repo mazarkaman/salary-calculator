@@ -1,12 +1,12 @@
-﻿using newnew.Application.Common.Exceptions;
-using newnew.Application.TodoItems.Commands.CreateTodoItem;
-using newnew.Application.TodoItems.Commands.DeleteTodoItem;
-using newnew.Application.TodoLists.Commands.CreateTodoList;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.TodoItems.Commands.CreateTodoItem;
+using Entekhab.Salary.Application.TodoItems.Commands.DeleteTodoItem;
+using Entekhab.Salary.Application.TodoLists.Commands.CreateTodoList;
+using Entekhab.Salary.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace newnew.Application.IntegrationTests.TodoItems.Commands;
+namespace Entekhab.Salary.Application.IntegrationTests.TodoItems.Commands;
 
 using static Testing;
 

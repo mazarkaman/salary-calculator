@@ -1,8 +1,8 @@
-﻿using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace newnew.Infrastructure.Persistence.Configurations;
+namespace Entekhab.Salary.Infrastructure.Persistence.Configurations;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace newnew.Application.TodoItems.Commands.UpdateTodoItem;
+namespace Entekhab.Salary.Application.TodoItems.Commands.UpdateTodoItem;
 
 public class UpdateTodoItemCommandValidator : AbstractValidator<UpdateTodoItemCommand>
 {
