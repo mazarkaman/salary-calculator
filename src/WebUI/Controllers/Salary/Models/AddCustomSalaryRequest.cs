@@ -3,8 +3,8 @@ using Entekhab.Salary.Domain.Entities;
 
 namespace WebUI.Controllers.Salary.Models;
 
-public class AddSalaryRequest   
+public class AddCustomSalaryRequest   
 {
     public CalculatorType OverTimeCalculator { get; set; }
-    public SalaryDataDto SalaryData { get; set; }
+    public string SalaryData { get; set; }
 }

@@ -6,6 +6,222 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/api/SalaryCalculator/json": {
+      "post": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_AddJson",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSalaryRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SalaryCalculator/custom": {
+      "post": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_AddCustom",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCustomSalaryRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SalaryCalculator/{itemId}": {
+      "put": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_Update",
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSalaryRequest"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 2
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_Delete",
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SalaryCalculator/{personId}": {
+      "get": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_Get",
+        "parameters": [
+          {
+            "name": "personId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SalaryCalculator/range": {
+      "get": {
+        "tags": [
+          "SalaryCalculator"
+        ],
+        "operationId": "SalaryCalculator_Get2",
+        "parameters": [
+          {
+            "name": "fromDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "toDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/TodoItems": {
       "get": {
         "tags": [
@@ -440,6 +656,86 @@
   },
   "components": {
     "schemas": {
+      "AddSalaryRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "overTimeCalculator": {
+            "$ref": "#/components/schemas/CalculatorType"
+          },
+          "salaryData": {
+            "$ref": "#/components/schemas/SalaryDataDto"
+          }
+        }
+      },
+      "CalculatorType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "TypeA",
+          "TypeB",
+          "TypeC"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
+      "SalaryDataDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "personId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "basicSalary": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "allowance": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "transportation": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      },
+      "AddCustomSalaryRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "overTimeCalculator": {
+            "$ref": "#/components/schemas/CalculatorType"
+          },
+          "salaryData": {
+            "type": "string"
+          }
+        }
+      },
+      "UpdateSalaryRequest": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AddSalaryRequest"
+          },
+          {
+            "type": "object",
+            "additionalProperties": false
+          }
+        ]
+      },
       "PaginatedListOfTodoItemBriefDto": {
         "type": "object",
         "additionalProperties": false,

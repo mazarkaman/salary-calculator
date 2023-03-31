@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\OvertimePolicies\OvertimePolicies.csproj" />
         <ProjectReference Include="..\Application\Application.csproj" />
     </ItemGroup>
 
