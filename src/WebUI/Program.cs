@@ -11,6 +11,7 @@ builder.Services.AddWebUIServices();
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -34,6 +35,7 @@ app.UseSwaggerUi3(settings =>
     settings.Path = "/api";
     settings.DocumentPath = "/api/specification.json";
 });
+
 
 app.UseRouting();
 
