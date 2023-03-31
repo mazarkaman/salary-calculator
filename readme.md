@@ -60,5 +60,5 @@ For simplicity, the database contains only one table named **SalaryData**, and t
 
 ## Contributors
 - This project was developed by: **Mohammad Sadegh Azarkaman**. <br/>
-- This project based on https://github.com/jasontaylordev/Cl
+- This project based on https://github.com/jasontaylordev/CleanArchitecture
 
