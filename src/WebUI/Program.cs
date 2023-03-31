@@ -1,3 +1,4 @@
+using Entekhab.Salary.Application;
 using Entekhab.Salary.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
