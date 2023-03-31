@@ -5,9 +5,9 @@ This project is for calculating employee salaries using ASP.NET Core 7 and clean
 - **Domain**: Contains all entities, enums, exceptions, interfaces, types, and logic specific to the domain layer.
 - **Application**: Contains all application logic. It depends on the domain layer but has no dependencies on any other layer or project. This layer defines interfaces that are implemented by outside layers. For example, if the application needs to access a notification service, a new interface would be added to application and an implementation would be created within infrastructure.
 - **Infrastructure**: Contains classes for accessing external resources such as file systems, web services, smtp, etc. These classes should be based on interfaces defined within the application layer.
-- **WebUI**: Contains web APIs without any logic.
+- **WebUI**: Contains web APIs without any business logic.
 
-This project also includes a stand-alone library project named OvertimePolicies, which contains calculatorA, calculatorB, and calculatorC. You can easily add new calculators by implementing the OvertimeCalculator abstract class.
+This project also includes a stand-alone library project named **OvertimePolicies**, which contains calculatorA, calculatorB, and calculatorC. You can easily add new calculators by implementing the `OvertimeCalculator` abstract class.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -59,5 +59,6 @@ For simplicity, the database contains only one table named **SalaryData**, and t
 
 
 ## Contributors
-This project was developed by Mohammad Sadegh Azarkaman.
+- This project was developed by: **Mohammad Sadegh Azarkaman**. <br/>
+- This project based on https://github.com/jasontaylordev/Cl
 
