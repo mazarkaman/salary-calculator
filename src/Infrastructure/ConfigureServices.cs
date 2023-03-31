@@ -1,5 +1,4 @@
 ﻿using Entekhab.Salary.Application.Common.Interfaces;
-using Entekhab.Salary.Infrastructure.Files;
 using Entekhab.Salary.Infrastructure.Identity;
 using Entekhab.Salary.Infrastructure.Persistence;
 using Entekhab.Salary.Infrastructure.Persistence.Interceptors;
@@ -8,8 +7,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection;
+namespace Entekhab.Salary.Infrastructure;
 
 public static class ConfigureServices
 {
@@ -43,7 +43,6 @@ public static class ConfigureServices
 
         services.AddTransient<IDateTime, DateTimeService>();
         services.AddTransient<IIdentityService, IdentityService>();
-        services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
 
         services.AddAuthentication()
             .AddIdentityServerJwt();

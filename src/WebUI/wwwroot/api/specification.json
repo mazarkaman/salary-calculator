@@ -6,14 +6,16 @@
     "version": "1.0.0"
   },
   "paths": {
-    "/api/SalaryCalculator/json": {
+    "/SalaryCalculator/json": {
       "post": {
         "tags": [
           "SalaryCalculator"
         ],
+        "summary": "Adds a new salary record using JSON data.",
         "operationId": "SalaryCalculator_AddJson",
         "requestBody": {
           "x-name": "request",
+          "description": "The request containing the salary data and overtime calculator.",
           "content": {
             "application/json": {
               "schema": {
@@ -25,13 +27,12 @@
           "x-position": 1
         },
         "responses": {
-          "200": {
-            "description": "",
+          "201": {
+            "description": "The newly created salary record.",
             "content": {
-              "application/octet-stream": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/SalaryDataDto"
                 }
               }
             }
@@ -39,14 +40,16 @@
         }
       }
     },
-    "/api/SalaryCalculator/custom": {
+    "/SalaryCalculator/custom": {
       "post": {
         "tags": [
           "SalaryCalculator"
         ],
+        "summary": "Adds a new salary record using custom data.",
         "operationId": "SalaryCalculator_AddCustom",
         "requestBody": {
           "x-name": "request",
+          "description": "The request containing the salary data and overtime calculator.",
           "content": {
             "application/json": {
               "schema": {
@@ -58,13 +61,12 @@
           "x-position": 1
         },
         "responses": {
-          "200": {
-            "description": "",
+          "201": {
+            "description": "The newly created salary record.",
             "content": {
-              "application/octet-stream": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/SalaryDataDto"
                 }
               }
             }
@@ -72,17 +74,19 @@
         }
       }
     },
-    "/api/SalaryCalculator/{itemId}": {
+    "/SalaryCalculator/{itemId}": {
       "put": {
         "tags": [
           "SalaryCalculator"
         ],
+        "summary": "Updates an existing salary record.",
         "operationId": "SalaryCalculator_Update",
         "parameters": [
           {
             "name": "itemId",
             "in": "path",
             "required": true,
+            "description": "The ID of the salary record to update.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -92,6 +96,7 @@
         ],
         "requestBody": {
           "x-name": "request",
+          "description": "The request containing the updated salary data and overtime calculator.",
           "content": {
             "application/json": {
               "schema": {
@@ -104,12 +109,11 @@
         },
         "responses": {
           "200": {
-            "description": "",
+            "description": "The updated salary record.",
             "content": {
-              "application/octet-stream": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/SalaryDataDto"
                 }
               }
             }
@@ -120,12 +124,14 @@
         "tags": [
           "SalaryCalculator"
         ],
+        "summary": "Deletes an existing salary record.",
         "operationId": "SalaryCalculator_Delete",
         "parameters": [
           {
             "name": "itemId",
             "in": "path",
             "required": true,
+            "description": "The ID of the salary record to delete.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -134,31 +140,25 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
+          "204": {
+            "description": "No content response."
           }
         }
       }
     },
-    "/api/SalaryCalculator/{personId}": {
+    "/SalaryCalculator/{personId}": {
       "get": {
         "tags": [
           "SalaryCalculator"
         ],
+        "summary": "Gets the salary record for a specific person.",
         "operationId": "SalaryCalculator_Get",
         "parameters": [
           {
             "name": "personId",
             "in": "path",
             "required": true,
+            "description": "The ID of the person whose salary record is requested.",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -168,12 +168,11 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "The salary record for the specified person.",
             "content": {
-              "application/octet-stream": {
+              "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
+                  "$ref": "#/components/schemas/SalaryDataDto"
                 }
               }
             }
@@ -181,16 +180,18 @@
         }
       }
     },
-    "/api/SalaryCalculator/range": {
+    "/SalaryCalculator/range": {
       "get": {
         "tags": [
           "SalaryCalculator"
         ],
-        "operationId": "SalaryCalculator_Get2",
+        "summary": "Gets the salary records for a range of dates.",
+        "operationId": "SalaryCalculator_GetAll",
         "parameters": [
           {
             "name": "fromDate",
             "in": "query",
+            "description": "The start date of the range.",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -200,6 +201,7 @@
           {
             "name": "toDate",
             "in": "query",
+            "description": "The end date of the range.",
             "schema": {
               "type": "string",
               "format": "date-time"
@@ -209,442 +211,13 @@
         ],
         "responses": {
           "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/TodoItems": {
-      "get": {
-        "tags": [
-          "TodoItems"
-        ],
-        "operationId": "TodoItems_GetTodoItemsWithPagination",
-        "parameters": [
-          {
-            "name": "ListId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          },
-          {
-            "name": "PageNumber",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 2
-          },
-          {
-            "name": "PageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 3
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PaginatedListOfTodoItemBriefDto"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "TodoItems"
-        ],
-        "operationId": "TodoItems_Create",
-        "requestBody": {
-          "x-name": "command",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateTodoItemCommand"
-              }
-            }
-          },
-          "required": true,
-          "x-position": 1
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      }
-    },
-    "/api/TodoItems/{id}": {
-      "put": {
-        "tags": [
-          "TodoItems"
-        ],
-        "operationId": "TodoItems_Update",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "requestBody": {
-          "x-name": "command",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateTodoItemCommand"
-              }
-            }
-          },
-          "required": true,
-          "x-position": 2
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "TodoItems"
-        ],
-        "operationId": "TodoItems_Delete",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      }
-    },
-    "/api/TodoItems/UpdateItemDetails": {
-      "put": {
-        "tags": [
-          "TodoItems"
-        ],
-        "operationId": "TodoItems_UpdateItemDetails",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "requestBody": {
-          "x-name": "command",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateTodoItemDetailCommand"
-              }
-            }
-          },
-          "required": true,
-          "x-position": 2
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      }
-    },
-    "/api/TodoLists": {
-      "get": {
-        "tags": [
-          "TodoLists"
-        ],
-        "operationId": "TodoLists_Get",
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TodosVm"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      },
-      "post": {
-        "tags": [
-          "TodoLists"
-        ],
-        "operationId": "TodoLists_Create",
-        "requestBody": {
-          "x-name": "command",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CreateTodoListCommand"
-              }
-            }
-          },
-          "required": true,
-          "x-position": 1
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      }
-    },
-    "/api/TodoLists/{id}": {
-      "get": {
-        "tags": [
-          "TodoLists"
-        ],
-        "operationId": "TodoLists_Get2",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      },
-      "put": {
-        "tags": [
-          "TodoLists"
-        ],
-        "operationId": "TodoLists_Update",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "requestBody": {
-          "x-name": "command",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateTodoListCommand"
-              }
-            }
-          },
-          "required": true,
-          "x-position": 2
-        },
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "TodoLists"
-        ],
-        "operationId": "TodoLists_Delete",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "",
-            "content": {
-              "application/octet-stream": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "JWT": []
-          }
-        ]
-      }
-    },
-    "/api/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "WeatherForecast_Get",
-        "responses": {
-          "200": {
-            "description": "",
+            "description": "The salary records for the specified date range.",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
+                    "$ref": "#/components/schemas/SalaryDataDto"
                   }
                 }
               }
@@ -656,32 +229,6 @@
   },
   "components": {
     "schemas": {
-      "AddSalaryRequest": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "overTimeCalculator": {
-            "$ref": "#/components/schemas/CalculatorType"
-          },
-          "salaryData": {
-            "$ref": "#/components/schemas/SalaryDataDto"
-          }
-        }
-      },
-      "CalculatorType": {
-        "type": "integer",
-        "description": "",
-        "x-enumNames": [
-          "TypeA",
-          "TypeB",
-          "TypeC"
-        ],
-        "enum": [
-          0,
-          1,
-          2
-        ]
-      },
       "SalaryDataDto": {
         "type": "object",
         "additionalProperties": false,
@@ -713,6 +260,32 @@
           }
         }
       },
+      "AddSalaryRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "overTimeCalculator": {
+            "$ref": "#/components/schemas/CalculatorType"
+          },
+          "salaryData": {
+            "$ref": "#/components/schemas/SalaryDataDto"
+          }
+        }
+      },
+      "CalculatorType": {
+        "type": "integer",
+        "description": "",
+        "x-enumNames": [
+          "TypeA",
+          "TypeB",
+          "TypeC"
+        ],
+        "enum": [
+          0,
+          1,
+          2
+        ]
+      },
       "AddCustomSalaryRequest": {
         "type": "object",
         "additionalProperties": false,
@@ -735,270 +308,7 @@
             "additionalProperties": false
           }
         ]
-      },
-      "PaginatedListOfTodoItemBriefDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TodoItemBriefDto"
-            }
-          },
-          "pageNumber": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalPages": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "totalCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "hasPreviousPage": {
-            "type": "boolean"
-          },
-          "hasNextPage": {
-            "type": "boolean"
-          }
-        }
-      },
-      "TodoItemBriefDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "listId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "done": {
-            "type": "boolean"
-          }
-        }
-      },
-      "CreateTodoItemCommand": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "listId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "UpdateTodoItemCommand": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "done": {
-            "type": "boolean"
-          }
-        }
-      },
-      "UpdateTodoItemDetailCommand": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "listId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "priority": {
-            "$ref": "#/components/schemas/PriorityLevel"
-          },
-          "note": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "PriorityLevel": {
-        "type": "integer",
-        "description": "",
-        "x-enumNames": [
-          "None",
-          "Low",
-          "Medium",
-          "High"
-        ],
-        "enum": [
-          0,
-          1,
-          2,
-          3
-        ]
-      },
-      "TodosVm": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "priorityLevels": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PriorityLevelDto"
-            }
-          },
-          "lists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TodoListDto"
-            }
-          }
-        }
-      },
-      "PriorityLevelDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "value": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "TodoListDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "colour": {
-            "type": "string",
-            "nullable": true
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/TodoItemDto"
-            }
-          }
-        }
-      },
-      "TodoItemDto": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "listId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          },
-          "done": {
-            "type": "boolean"
-          },
-          "priority": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "note": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "CreateTodoListCommand": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "title": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "UpdateTodoListCommand": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "title": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
-          }
-        }
-      }
-    },
-    "securitySchemes": {
-      "JWT": {
-        "type": "apiKey",
-        "description": "Type into the textbox: Bearer {your JWT token}.",
-        "name": "Authorization",
-        "in": "header"
       }
     }
-  },
-  "security": [
-    {
-      "JWT": []
-    }
-  ]
+  }
 }

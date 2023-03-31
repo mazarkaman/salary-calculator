@@ -1,6 +1,5 @@
 ﻿using Entekhab.Salary.Application.Common.Models;
 using Entekhab.Salary.Application.SalaryCalculator.Models;
-using Entekhab.Salary.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using MediatR;
 
 namespace Entekhab.Salary.Application.SalaryCalculator.Queries.GetSalaryByDate;
