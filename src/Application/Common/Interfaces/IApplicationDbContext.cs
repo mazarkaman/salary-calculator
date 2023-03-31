@@ -5,10 +5,6 @@ namespace Entekhab.Salary.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {
-    DbSet<TodoList> TodoLists { get; }
-
-    DbSet<TodoItem> TodoItems { get; }
-
     DbSet<SalaryData> SalaryData { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
