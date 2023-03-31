@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using newnew.Application.Common.Behaviours;
+using Entekhab.Salary.Application.Common.Behaviours;
 using FluentValidation;
 using MediatR;
 

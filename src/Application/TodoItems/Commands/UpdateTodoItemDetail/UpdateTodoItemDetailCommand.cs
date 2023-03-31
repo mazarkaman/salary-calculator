@@ -1,10 +1,10 @@
-﻿using newnew.Application.Common.Exceptions;
-using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
-using newnew.Domain.Enums;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Domain.Enums;
 using MediatR;
 
-namespace newnew.Application.TodoItems.Commands.UpdateTodoItemDetail;
+namespace Entekhab.Salary.Application.TodoItems.Commands.UpdateTodoItemDetail;
 
 public record UpdateTodoItemDetailCommand : IRequest
 {

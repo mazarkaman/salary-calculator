@@ -1,9 +1,9 @@
-﻿using newnew.Domain.Exceptions;
-using newnew.Domain.ValueObjects;
+﻿using Entekhab.Salary.Domain.Exceptions;
+using Entekhab.Salary.Domain.ValueObjects;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace newnew.Domain.UnitTests.ValueObjects;
+namespace Entekhab.Salary.Domain.UnitTests.ValueObjects;
 
 public class ColourTests
 {

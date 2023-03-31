@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
-using newnew.Application.TodoLists.Queries.ExportTodos;
+using Entekhab.Salary.Application.TodoLists.Queries.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace newnew.Infrastructure.Files.Maps;
+namespace Entekhab.Salary.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {

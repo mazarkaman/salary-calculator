@@ -1,10 +1,10 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Domain.Common;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace newnew.Infrastructure.Persistence.Interceptors;
+namespace Entekhab.Salary.Infrastructure.Persistence.Interceptors;
 
 public class AuditableEntitySaveChangesInterceptor : SaveChangesInterceptor
 {

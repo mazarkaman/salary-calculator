@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using newnew.Application.Common.Mappings;
-using newnew.Domain.Entities;
+using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Domain.Entities;
 
-namespace newnew.Application.TodoLists.Queries.GetTodos;
+namespace Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
 
 public class TodoItemDto : IMapFrom<TodoItem>
 {

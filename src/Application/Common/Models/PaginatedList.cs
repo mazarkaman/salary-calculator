@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Application.Common.Models;
+namespace Entekhab.Salary.Application.Common.Models;
 
 public class PaginatedList<T>
 {

@@ -1,10 +1,10 @@
-﻿using newnew.Application.Common.Exceptions;
-using newnew.Application.TodoLists.Commands.CreateTodoList;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.TodoLists.Commands.CreateTodoList;
+using Entekhab.Salary.Domain.Entities;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace newnew.Application.IntegrationTests.TodoLists.Commands;
+namespace Entekhab.Salary.Application.IntegrationTests.TodoLists.Commands;
 
 using static Testing;
 

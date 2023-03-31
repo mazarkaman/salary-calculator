@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace newnew.Application.IntegrationTests;
+namespace Entekhab.Salary.Application.IntegrationTests;
 
 public static class ServiceCollectionExtensions
 {

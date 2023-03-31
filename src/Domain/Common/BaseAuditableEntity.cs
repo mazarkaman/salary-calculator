@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.Common;
+﻿namespace Entekhab.Salary.Domain.Common;
 
 public abstract class BaseAuditableEntity : BaseEntity
 {

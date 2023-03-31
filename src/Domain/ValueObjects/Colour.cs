@@ -1,4 +1,4 @@
-﻿namespace newnew.Domain.ValueObjects;
+﻿namespace Entekhab.Salary.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

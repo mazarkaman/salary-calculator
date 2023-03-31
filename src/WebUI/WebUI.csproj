@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <InternalsVisibleTo Include="newnew.Application.IntegrationTests" />
+        <InternalsVisibleTo Include="Entekhab.Salary.Application.IntegrationTests" />
     </ItemGroup>
 
     <ItemGroup>

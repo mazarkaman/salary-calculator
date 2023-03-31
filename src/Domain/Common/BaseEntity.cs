@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace newnew.Domain.Common;
+namespace Entekhab.Salary.Domain.Common;
 
 public abstract class BaseEntity
 {

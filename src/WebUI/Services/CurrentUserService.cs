@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
 
-using newnew.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Interfaces;
 
-namespace newnew.WebUI.Services;
+namespace Entekhab.Salary.WebUI.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

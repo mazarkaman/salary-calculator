@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace newnew.Application.IntegrationTests;
+namespace Entekhab.Salary.Application.IntegrationTests;
 
 using static Testing;
 

@@ -1,6 +1,6 @@
-﻿using newnew.Application.Common.Interfaces;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
 
-namespace newnew.Infrastructure.Services;
+namespace Entekhab.Salary.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

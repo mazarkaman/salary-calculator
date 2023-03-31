@@ -1,9 +1,9 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Domain.Entities;
-using newnew.Domain.Events;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Domain.Entities;
+using Entekhab.Salary.Domain.Events;
 using MediatR;
 
-namespace newnew.Application.TodoItems.Commands.CreateTodoItem;
+namespace Entekhab.Salary.Application.TodoItems.Commands.CreateTodoItem;
 
 public record CreateTodoItemCommand : IRequest<int>
 {

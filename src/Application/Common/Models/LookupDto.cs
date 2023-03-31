@@ -1,7 +1,7 @@
-﻿using newnew.Application.Common.Mappings;
-using newnew.Domain.Entities;
+﻿using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Domain.Entities;
 
-namespace newnew.Application.Common.Models;
+namespace Entekhab.Salary.Application.Common.Models;
 
 // Note: This is currently just used to demonstrate applying multiple IMapFrom attributes.
 public class LookupDto : IMapFrom<TodoList>, IMapFrom<TodoItem>

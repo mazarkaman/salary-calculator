@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>newnew.Infrastructure</RootNamespace>
-        <AssemblyName>newnew.Infrastructure</AssemblyName>
+        <RootNamespace>Entekhab.Salary.Infrastructure</RootNamespace>
+        <AssemblyName>Entekhab.Salary.Infrastructure</AssemblyName>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>

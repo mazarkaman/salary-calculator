@@ -1,7 +1,7 @@
 using System.Reflection;
 using AutoMapper;
 
-namespace newnew.Application.Common.Mappings;
+namespace Entekhab.Salary.Application.Common.Mappings;
 
 public class MappingProfile : Profile
 {

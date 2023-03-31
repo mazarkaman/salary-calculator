@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <RootNamespace>newnew.Application.IntegrationTests</RootNamespace>
-        <AssemblyName>newnew.Application.IntegrationTests</AssemblyName>
+        <RootNamespace>Entekhab.Salary.Application.IntegrationTests</RootNamespace>
+        <AssemblyName>Entekhab.Salary.Application.IntegrationTests</AssemblyName>
 
         <IsPackable>false</IsPackable>
         <ImplicitUsings>enable</ImplicitUsings>

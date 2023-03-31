@@ -1,10 +1,10 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Application.Common.Models;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Infrastructure.Identity;
+namespace Entekhab.Salary.Infrastructure.Identity;
 
 public class IdentityService : IIdentityService
 {

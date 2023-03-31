@@ -1,8 +1,8 @@
-﻿using newnew.Application.Common.Interfaces;
-using newnew.Application.Common.Security;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Security;
 using MediatR;
 
-namespace newnew.Application.TodoLists.Commands.PurgeTodoLists;
+namespace Entekhab.Salary.Application.TodoLists.Commands.PurgeTodoLists;
 
 [Authorize(Roles = "Administrator")]
 [Authorize(Policy = "CanPurge")]

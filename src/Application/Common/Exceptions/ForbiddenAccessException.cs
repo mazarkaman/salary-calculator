@@ -1,4 +1,4 @@
-﻿namespace newnew.Application.Common.Exceptions;
+﻿namespace Entekhab.Salary.Application.Common.Exceptions;
 
 public class ForbiddenAccessException : Exception
 {

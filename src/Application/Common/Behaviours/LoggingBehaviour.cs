@@ -1,8 +1,8 @@
-﻿using newnew.Application.Common.Interfaces;
+﻿using Entekhab.Salary.Application.Common.Interfaces;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace newnew.Application.Common.Behaviours;
+namespace Entekhab.Salary.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {
@@ -28,7 +28,7 @@ public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where T
             userName = await _identityService.GetUserNameAsync(userId);
         }
 
-        _logger.LogInformation("newnew Request: {Name} {@UserId} {@UserName} {@Request}",
+        _logger.LogInformation("Entekhab.Salary Request: {Name} {@UserId} {@UserName} {@Request}",
             requestName, userId, userName, request);
     }
 }

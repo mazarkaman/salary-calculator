@@ -1,12 +1,12 @@
-﻿using newnew.Application.TodoLists.Commands.CreateTodoList;
-using newnew.Application.TodoLists.Commands.DeleteTodoList;
-using newnew.Application.TodoLists.Commands.UpdateTodoList;
-using newnew.Application.TodoLists.Queries.ExportTodos;
-using newnew.Application.TodoLists.Queries.GetTodos;
+﻿using Entekhab.Salary.Application.TodoLists.Commands.CreateTodoList;
+using Entekhab.Salary.Application.TodoLists.Commands.DeleteTodoList;
+using Entekhab.Salary.Application.TodoLists.Commands.UpdateTodoList;
+using Entekhab.Salary.Application.TodoLists.Queries.ExportTodos;
+using Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace newnew.WebUI.Controllers;
+namespace Entekhab.Salary.WebUI.Controllers;
 
 [Authorize]
 public class TodoListsController : ApiControllerBase

@@ -1,9 +1,9 @@
-﻿using newnew.Application.Common.Exceptions;
+﻿using Entekhab.Salary.Application.Common.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;
 
-namespace newnew.Application.UnitTests.Common.Exceptions;
+namespace Entekhab.Salary.Application.UnitTests.Common.Exceptions;
 
 public class ValidationExceptionTests
 {

@@ -1,6 +1,6 @@
-﻿global using newnew.Domain.Common;
-global using newnew.Domain.Entities;
-global using newnew.Domain.Enums;
-global using newnew.Domain.Events;
-global using newnew.Domain.Exceptions;
-global using newnew.Domain.ValueObjects;
+﻿global using Entekhab.Salary.Domain.Common;
+global using Entekhab.Salary.Domain.Entities;
+global using Entekhab.Salary.Domain.Enums;
+global using Entekhab.Salary.Domain.Events;
+global using Entekhab.Salary.Domain.Exceptions;
+global using Entekhab.Salary.Domain.ValueObjects;

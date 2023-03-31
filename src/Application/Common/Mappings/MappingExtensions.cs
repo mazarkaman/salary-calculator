@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using newnew.Application.Common.Models;
+using Entekhab.Salary.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace newnew.Application.Common.Mappings;
+namespace Entekhab.Salary.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

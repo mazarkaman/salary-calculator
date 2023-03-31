@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using newnew.Application.Common.Interfaces;
-using newnew.Application.Common.Mappings;
-using newnew.Application.Common.Models;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Mappings;
+using Entekhab.Salary.Application.Common.Models;
 using MediatR;
 
-namespace newnew.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+namespace Entekhab.Salary.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 
 public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemBriefDto>>
 {

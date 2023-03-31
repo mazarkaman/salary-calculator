@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
-using newnew.Application.Common.Exceptions;
-using newnew.Application.Common.Interfaces;
-using newnew.Application.Common.Security;
+using Entekhab.Salary.Application.Common.Exceptions;
+using Entekhab.Salary.Application.Common.Interfaces;
+using Entekhab.Salary.Application.Common.Security;
 using MediatR;
 
-namespace newnew.Application.Common.Behaviours;
+namespace Entekhab.Salary.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {

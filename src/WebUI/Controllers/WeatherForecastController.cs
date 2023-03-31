@@ -1,7 +1,7 @@
-﻿using newnew.Application.WeatherForecasts.Queries.GetWeatherForecasts;
+﻿using Entekhab.Salary.Application.WeatherForecasts.Queries.GetWeatherForecasts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace newnew.WebUI.Controllers;
+namespace Entekhab.Salary.WebUI.Controllers;
 
 public class WeatherForecastController : ApiControllerBase
 {

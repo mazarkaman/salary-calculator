@@ -1,13 +1,13 @@
-﻿using newnew.Application.Common.Models;
-using newnew.Application.TodoItems.Commands.CreateTodoItem;
-using newnew.Application.TodoItems.Commands.DeleteTodoItem;
-using newnew.Application.TodoItems.Commands.UpdateTodoItem;
-using newnew.Application.TodoItems.Commands.UpdateTodoItemDetail;
-using newnew.Application.TodoItems.Queries.GetTodoItemsWithPagination;
+﻿using Entekhab.Salary.Application.Common.Models;
+using Entekhab.Salary.Application.TodoItems.Commands.CreateTodoItem;
+using Entekhab.Salary.Application.TodoItems.Commands.DeleteTodoItem;
+using Entekhab.Salary.Application.TodoItems.Commands.UpdateTodoItem;
+using Entekhab.Salary.Application.TodoItems.Commands.UpdateTodoItemDetail;
+using Entekhab.Salary.Application.TodoItems.Queries.GetTodoItemsWithPagination;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace newnew.WebUI.Controllers;
+namespace Entekhab.Salary.WebUI.Controllers;
 
 [Authorize]
 public class TodoItemsController : ApiControllerBase

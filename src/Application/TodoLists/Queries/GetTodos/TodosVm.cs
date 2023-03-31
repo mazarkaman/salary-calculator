@@ -1,4 +1,4 @@
-﻿namespace newnew.Application.TodoLists.Queries.GetTodos;
+﻿namespace Entekhab.Salary.Application.TodoLists.Queries.GetTodos;
 
 public class TodosVm
 {

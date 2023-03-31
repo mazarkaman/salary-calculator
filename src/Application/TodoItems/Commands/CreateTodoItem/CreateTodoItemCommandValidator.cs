@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace newnew.Application.TodoItems.Commands.CreateTodoItem;
+namespace Entekhab.Salary.Application.TodoItems.Commands.CreateTodoItem;
 
 public class CreateTodoItemCommandValidator : AbstractValidator<CreateTodoItemCommand>
 {

@@ -1,5 +1,5 @@
-﻿using newnew.Infrastructure.Identity;
-using newnew.Infrastructure.Persistence;
+﻿using Entekhab.Salary.Infrastructure.Identity;
+using Entekhab.Salary.Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using Respawn;
 
-namespace newnew.Application.IntegrationTests;
+namespace Entekhab.Salary.Application.IntegrationTests;
 
 [SetUpFixture]
 public partial class Testing
